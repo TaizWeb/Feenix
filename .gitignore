@@ -1,0 +1,5 @@
+*.swp
+.vscode/
+Feenix.db
+__pycache__/
+feenix/
