@@ -3,3 +3,4 @@
 Feenix.db
 __pycache__/
 feenix/
+.gitignore
