@@ -12,18 +12,6 @@ app.secret_key = os.environ['flask_secret_key']
 def string_escape(string):
 	return string.replace("\"", "\"\"").replace("\'", "\'\'")
 
-# TODO
-# v0.2.0 will allow users with accounts to talk to each other on an ugly html page
-# v0.3.0 will work more on the database and getting it to store messages effectively
-# v0.4.0 will have different channels (thus more tables)
-# v0.5.0 will have server configuration via .json files
-# v0.6.0 will include assignable rolls and heirarchy. Prepare for a bunch of if statements.
-# v0.7.0 will include some detection stuff like "is typing..." and offline statuses
-# v0.8.0 will include markdown support and link detection, along with emojis
-# v0.9.0 will include image uploading and profile pics
-# v1.0.0 will have a complete front-end redesign and any last-minute features
-# End result of 1.0 is a finished product, one that would allow people to run the software on a vps and allow for a functional chatroom. 2.0 will probably include some federation stuff.
-
 # TODO: Test websocket server running along side web server capabilites, probably google a tutorial to fix the hanging issues currently plauging us
 async def testsock(websocket, path):
 	test = await websocket.recv()
@@ -176,5 +164,3 @@ def home():
 	else:
 		# TODO: Add a "please login" message
 		return redirect(url_for('login'))
-
-
